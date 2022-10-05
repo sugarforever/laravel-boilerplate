@@ -50,7 +50,7 @@ class Web3AuthController extends Controller
 
     private function getSignatureMessage($code)
     {
-        return __("I have read and accepted the terms and conditions.\nPlease sign me in.\n\nNonce: :nonce", [
+        return __("You are going to sign the message and log in.\n\nNonce: :nonce", [
             'nonce' => $code
         ]);
     }
