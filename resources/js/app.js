@@ -25,7 +25,7 @@ document.onreadystatechange = () => {
             const redirectUrl = metaMaskLoginButton.getAttribute("data-redirect-url");
 
             const message = (await axios.get(signatureUrl)).data;
-            const address = (await web3.eth.requestAccounts())[0];
+            const [ address ] = await web3.eth.requestAccounts();
 
             const signature = await web3.eth.personal.sign(message, address);
 
