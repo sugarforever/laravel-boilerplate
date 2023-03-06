@@ -20,10 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::get('/metamask-login', function () {
     if (Auth::check()) {
         return redirect()->route("dashboard");
@@ -34,6 +30,6 @@ Route::get('/metamask-login', function () {
 Route::get('/eth/signature', [Web3AuthController::class, 'signature'])->name('metamask.signature');
 Route::post('/eth/authenticate', [Web3AuthController::class, 'authenticate'])->name('metamask.authenticate');
 
-Route::get('/home', [DashboardController::class, 'index'])->middleware(['auth'])->name('home');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
