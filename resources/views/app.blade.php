@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
     @vite('resources/css/app.css')
+    @vite('resources/css/buttons.css')
+    @vite('resources/css/form.css')
+    @vite('resources/css/reset.css')
     @vite('resources/js/app.js')
     @inertiaHead
   </head>

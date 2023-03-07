@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web3\Web3AuthController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -16,9 +19,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index']);
 
 Route::get('/metamask-login', function () {
     if (Auth::check()) {
@@ -32,4 +33,27 @@ Route::post('/eth/authenticate', [Web3AuthController::class, 'authenticate'])->n
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::get('register', [RegisteredUserController::class, 'create'])
+    ->name('register')
+    ->middleware('guest');
+
+Route::post('register', [RegisteredUserController::class, 'store'])
+    ->name('register.store')
+    ->middleware('guest');
+
+Route::get('login', [AuthenticatedSessionController::class, 'create'])
+    ->name('login')
+    ->middleware('guest');
+
+Route::get('metamask-login', [AuthenticatedSessionController::class, 'metamaskLogin'])
+    ->name('metamask-login')
+    ->middleware('guest');
+
+Route::post('login', [AuthenticatedSessionController::class, 'store'])
+    ->name('login.store')
+    ->middleware('guest');
+
+Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
+    ->name('logout');
+
+// require __DIR__.'/auth.php';

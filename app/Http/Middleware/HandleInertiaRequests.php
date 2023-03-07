@@ -37,6 +37,9 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
+            'app' => [
+                'name' => config("app.name")
+            ],
             'auth' => function () use ($request) {
                 return [
                     'user' => $request->user() ? [
@@ -53,6 +56,11 @@ class HandleInertiaRequests extends Middleware
                     'error' => $request->session()->get('error'),
                 ];
             },
+            'metamask' => [
+                'signatureUrl' => route('metamask.signature'),
+                'authenticateUrl' => route('metamask.authenticate'),
+                'redirectUrl' => route('dashboard')
+            ]
         ]);
     }
 }
