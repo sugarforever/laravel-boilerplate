@@ -1,14 +1,15 @@
 <template>
-    <div>Hello</div>
+  <Head title="Dashboard" />
+  <div>Hello</div>
 </template>
 
 <script>
 import { Head } from '@inertiajs/inertia-vue3'
 import Layout from '@/Shared/Layout.vue'
 export default {
-    components: {
-        Head,
-    },
-    layout: Layout,
+  components: {
+    Head,
+  },
+  layout: Layout,
 }
 </script>
