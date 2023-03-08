@@ -3,7 +3,8 @@ import { Link } from '@inertiajs/inertia-vue3'
 
 const props = defineProps({
   auth: Object,
-  app: Object
+  app: Object,
+  metamask: Object
 })
 </script>
 
@@ -17,7 +18,7 @@ const props = defineProps({
       <Link v-if="auth?.user" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline" href="/logout"
         method="delete" as="button">Logout</Link>
       <a v-if="!auth?.user" :href="`/login`" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-      <a v-if="!auth?.user" :href="`metamask-login`" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Log
+      <a v-if="!auth?.user && metamask.enabled" :href="`metamask-login`" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Log
         in
         with MetaMask</a>
       <a v-if="!auth?.user" :href="`/register`"

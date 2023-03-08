@@ -212,4 +212,17 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Metamask Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This array of Metamask configuration items will be used to enable or
+    | disable the Matamask integration.
+    |
+    */
+
+    'metamask' => [
+        'enabled' => false
+    ]
 ];
