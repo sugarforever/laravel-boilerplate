@@ -14,5 +14,5 @@ onBeforeUnmount(() => autosize.destroy(el.value));
 </script>
 
 <template>
-  <textarea ref="el" @input="emit('update:modelValue', $event.target.value)" v-model="props.modelValue"></textarea>
+  <textarea ref="el" @input="emit('update:modelValue', $event.target.value)" v-model="props.modelValue" />
 </template>
