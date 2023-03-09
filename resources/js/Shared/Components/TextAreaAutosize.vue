@@ -21,6 +21,5 @@ onBeforeUnmount(() => autosize.destroy(el.value));
 
 <template>
   <textarea ref="el"
-    class="block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring-blue-400"
     @input="emit('update:modelValue', $event.target.value)" v-model="props.modelValue"></textarea>
 </template>
