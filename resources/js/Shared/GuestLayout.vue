@@ -12,7 +12,7 @@ const props = defineProps({
   <div class="flex flex-col bg-fuchsia-100 dark:bg-fuchsia-800">
     <slot />
 
-    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+    <div class="fixed top-0 right-0 px-6 py-4 sm:block">
       <a :href="`/`" class="mr-4 text-sm text-gray-700 dark:text-gray-500 underline">{{ app.name }}</a>
       <a v-if="auth?.user" :href="`/dashboard`" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
       <Link v-if="auth?.user" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline" href="/logout"
