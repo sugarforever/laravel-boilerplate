@@ -14,6 +14,10 @@ class PaginationService
         $per_page = $paginator->perPage();
         $multiple_pages = $paginator->lastPage() > 1;
 
+        $page_urls = [];
+        for ($i = 1; $i <= $last_page; $i++) {
+            $page_urls[] = $paginator->url($i);
+        }
         return compact(
             "next_page_url",
             "prev_page_url",
@@ -21,7 +25,8 @@ class PaginationService
             "last_page",
             "total",
             "per_page",
-            "multiple_pages"
+            "multiple_pages",
+            "page_urls"
         );
     }
 }
