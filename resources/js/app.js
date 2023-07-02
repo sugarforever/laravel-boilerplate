@@ -56,13 +56,13 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 /* add icons to the library */
 library.add(faUserSecret)
 
+import en from './i18n/en.js'
+import zh_CN from './i18n/zh_CN.js'
 const i18n = createI18n({
   locale: 'zh_CN',
   messages: {
-    en: {
-    },
-    zh_CN: {
-    }
+    en: en,
+    zh_CN: zh_CN
   }
 })
 createInertiaApp({
