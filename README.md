@@ -1,66 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Boilerplate and Starter for Laravel 9.19, Tailwind CSS 3.1.0 and Inertia 0.11.1 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40VerySmallWoods)](https://twitter.com/verysmallwoods)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+🚀 Boilerplate and Starter for Laravel, Tailwind CSS and Inertia
 
-## About Laravel
+Clone this project or use it as a template, to create your own [Laravel](https://laravel.com/) application.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### What's included
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Developer experience first:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- ⚡ [Inertia](https://inertiajs.com/)
+- 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
+- 💖 Frontend build with [Vite](https://vitejs.dev/)
+- 👷 Permissions with [Spatie laravel-permissions](https://spatie.be/docs/laravel-permission/v5/introduction)
+- 🌈 Icons with [Font Awesome 6](https://fontawesome.com/icons)
+- 🎉 Web3 enabled with Metamask Wallet authentication [MetaMask](https://metamask.io/)
 
-## Learning Laravel
+### Requirements
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- PHP 8.1+ and [Composer](https://getcomposer.org/)
+- Laravel supported database, for example MySQL or PostgreSQL
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Getting started
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Make sure you have your database up and running.
 
-## Laravel Sponsors
+Create a database for your application.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Run the following command on your local environment:
 
-### Premium Partners
+```shell
+git clone --depth=1 https://github.com/sugarforever/laravel-boilerplate.git my-project-name
+cd my-project-name
+npm install
+composer install
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Then, you can copy .env.example and paste it as .env, and fill in the database information.
 
-## Contributing
+```shell
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Then, you can run locally in development mode with live reload to build and watch the assets:
 
-## Code of Conduct
+```shell
+npm run dev
+```
+Now, you can launch the Laravel application locally in development mode:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```shell
+php artisan server
+```
 
-## Security Vulnerabilities
+Open http://localhost:8000 with your favorite browser to see your project.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### License
 
-## License
+Licensed under the MIT License, Copyright © 2022
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+See [LICENSE](LICENSE) for more information.
+
+---
+
+Made with ♥ by verysmallwoods [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40VerySmallWoods)](https://twitter.com/verysmallwoods)
