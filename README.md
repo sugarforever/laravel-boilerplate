@@ -13,6 +13,7 @@ Developer experience first:
 - 💖 Frontend build with [Vite](https://vitejs.dev/)
 - 👷 Permissions with [Spatie laravel-permissions](https://spatie.be/docs/laravel-permission/v5/introduction)
 - 🌈 Icons with [Font Awesome 6](https://fontawesome.com/icons)
+- 📓 Localization with [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - 🎉 Web3 enabled with Metamask Wallet authentication [MetaMask](https://metamask.io/)
 
 ### Requirements
@@ -38,6 +39,8 @@ composer install
 Then, you can copy .env.example and paste it as .env, and fill in the database information.
 
 ```shell
+cp .env.example .env
+```
 
 Then, you can run locally in development mode with live reload to build and watch the assets:
 
